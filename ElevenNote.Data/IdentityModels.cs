@@ -40,10 +40,10 @@ namespace ElevenNote.Data
                 .Conventions
                 .Remove<PluralizingTableNameConvention>();
 
-            modelBuilder.
-                Configurations.
-                Add(new IdentityUserLoginConfiguration()).
-                Add(new IdentityUserRoleConfiguration());
+            modelBuilder
+                .Configurations
+                .Add(new IdentityUserLoginConfiguration())
+                .Add(new IdentityUserRoleConfiguration());
         }
     }
 
