@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElevenNote.MobileApp.ExternalServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,8 @@ namespace ElevenNote.MobileApp
 {
 	public partial class App : Application
 	{
+        internal static readonly NoteService NoteService = new NoteService();
+
 		public App ()
 		{
 			InitializeComponent();
