@@ -61,7 +61,11 @@ namespace ElevenNote.Web.Controllers
                 {
                     NoteId = detail.NoteId,
                     Title = detail.Title,
-                    Content = detail.Content
+                    Content = detail.Content,
+                    OtherContent = detail.OtherContent,
+                    Sub = detail.Sub,
+                    Tip = detail.Tip,
+                    Total = detail.Total
                 };
 
             return View(model);

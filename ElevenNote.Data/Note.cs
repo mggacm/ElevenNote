@@ -19,8 +19,14 @@ namespace ElevenNote.Data
         [Required]
         public string Title { get; set; }
 
-        [Required]
+       
         public string Content { get; set; }
+
+        public string OtherContent { get; set; }
+
+        public decimal Sub { get; set; }
+        public decimal Tip { get; set; }
+        public decimal Total { get; set; }
 
         [DefaultValue(false)]
         public bool IsStarred { get; set; }

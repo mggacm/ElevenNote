@@ -14,6 +14,12 @@ namespace ElevenNote.Models
 
         public string Content { get; set; }
 
+        public string OtherContent { get; set; }
+
+        public decimal Sub { get; set; }
+        public decimal Tip { get; set; }
+        public decimal Total { get; set; }
+
         public bool IsStarred { get; set; }
 
         public DateTimeOffset CreatedUtc { get; set; }

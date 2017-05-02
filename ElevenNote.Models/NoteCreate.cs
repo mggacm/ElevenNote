@@ -14,11 +14,26 @@ namespace ElevenNote.Models
         [MaxLength(128)]
         public string Title { get; set; }
 
-        [Required]
+       
         [MaxLength(8000)]
         public string Content { get; set; }
+       
+        [MaxLength(8000)]
+        public string OtherContent { get; set; }
+
+        public decimal Sub { get; set; }
+        public decimal Tip { get; set; }
+        
+        public decimal Total { get; set; }
 
         public override string ToString() => Title;
+
+        public virtual void GetTotal()
+        {
+            var SmallTip = Sub * Tip;
+
+            Total = Sub + SmallTip;            
+        }
        
     }
 }
