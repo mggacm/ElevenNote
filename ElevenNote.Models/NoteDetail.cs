@@ -20,6 +20,9 @@ namespace ElevenNote.Models
         public decimal Tip { get; set; }
         public decimal Total { get; set; }
 
+        public decimal X { get; set; }
+        public decimal Y { get; set; }
+
         public bool IsStarred { get; set; }
 
         public DateTimeOffset CreatedUtc { get; set; }
