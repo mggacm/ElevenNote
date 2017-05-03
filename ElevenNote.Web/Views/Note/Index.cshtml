@@ -22,9 +22,9 @@
 
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.NoteId)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
@@ -39,9 +39,9 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.NoteId)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>

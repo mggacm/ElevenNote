@@ -10,13 +10,13 @@
     <h4>NoteDetail</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.NoteId)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.NoteId)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Title)
@@ -34,6 +34,30 @@
             @Html.DisplayFor(model => model.Content)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sub)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sub)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tip)
+        </dd>
+        @*//----Total----//*@
         <dt>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </dt>

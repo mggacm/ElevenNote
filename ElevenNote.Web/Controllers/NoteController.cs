@@ -65,6 +65,7 @@ namespace ElevenNote.Web.Controllers
                     OtherContent = detail.OtherContent,
                     Sub = detail.Sub,
                     Tip = detail.Tip,
+                    //----Total----//
                     Total = detail.Total
                 };
 

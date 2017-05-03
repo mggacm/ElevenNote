@@ -27,6 +27,7 @@ namespace ElevenNote.Services
                 OtherContent = model.OtherContent,
                 Sub = model.Sub,
                 Tip = model.Tip,
+                //----Total----//
                 CreatedUtc = DateTimeOffset.UtcNow
             };
 
@@ -75,7 +76,9 @@ namespace ElevenNote.Services
                     Title = entity.Title,
                     Content = entity.Content,
                     OtherContent = entity.OtherContent,
+                    Sub = entity.Sub,
                     Tip = entity.Tip,
+                    Total = entity.Total,
                     IsStarred = entity.IsStarred,
                     CreatedUtc = entity.CreatedUtc,
                     ModifiedUtc = entity.ModifiedUtc
@@ -97,7 +100,7 @@ namespace ElevenNote.Services
                 entity.OtherContent = model.OtherContent;
                 entity.Sub = model.Sub;
                 entity.Tip = model.Tip;
-                
+                //----Total----//
                 entity.Total = model.Total;
                 entity.IsStarred = model.IsStarred;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;

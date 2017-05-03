@@ -28,11 +28,17 @@ namespace ElevenNote.Models
 
         public override string ToString() => Title;
 
-        public virtual void GetTotal()
+        public void GetTip()
         {
-            var SmallTip = Sub * Tip;
+            var SmallTip = Tip / 100;
+            var TrueTip = Sub * SmallTip;
 
-            Total = Sub + SmallTip;            
+        }
+
+        public void GetTotal()
+        {
+             decimal cTip = Convert.ToDecimal(GetTip());
+            Total = Sub + cTip;
         }
        
     }
