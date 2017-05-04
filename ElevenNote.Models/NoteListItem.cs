@@ -12,9 +12,11 @@ namespace ElevenNote.Models
         public int NoteId { get; set; }
 
         public string Title { get; set; }
-
+        [DataType(DataType.Currency)]
         public decimal Total { get; set; }
+        
         public decimal Tip { get; set; }
+        [DataType(DataType.Currency)]
         public decimal TipDecimal { get; set; }
         [UIHint("Starred")]
         public bool IsStarred { get; set; }

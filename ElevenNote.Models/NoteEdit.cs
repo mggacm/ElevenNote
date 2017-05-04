@@ -16,12 +16,13 @@ namespace ElevenNote.Models
         public string Content { get; set; }
 
         public string OtherContent { get; set; }
-
+        [DataType(DataType.Currency)]
         public decimal Sub { get; set; }
         [Display(Name="Tip %")]
         public decimal Tip { get; set; }
+        [DataType(DataType.Currency)]
         public decimal Total { get; set; }
-
+        [DataType(DataType.Currency)]
         public decimal TipDecimal { get; set; }
         public decimal Y { get; set; }
 
