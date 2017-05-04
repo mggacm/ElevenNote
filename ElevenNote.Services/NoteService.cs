@@ -27,7 +27,8 @@ namespace ElevenNote.Services
                 OtherContent = model.OtherContent,
                 Sub = model.Sub,
                 Tip = model.Tip,
-                //----Total----//
+                TipDecimal = (model.Tip / 100) * model.Sub,
+                Total = model.Sub + ((model.Tip / 100) * model.Sub),
                 CreatedUtc = DateTimeOffset.UtcNow
             };
 
@@ -52,6 +53,9 @@ namespace ElevenNote.Services
                             {
                                 NoteId = e.NoteId,
                                 Title = e.Title,
+                                Tip = e.Tip,
+                                TipDecimal = e.TipDecimal,
+                                Total = e.Total,
                                 IsStarred = e.IsStarred,
                                 CreatedUtc = e.CreatedUtc
                             }
@@ -78,7 +82,9 @@ namespace ElevenNote.Services
                     OtherContent = entity.OtherContent,
                     Sub = entity.Sub,
                     Tip = entity.Tip,
+                    TipDecimal = entity.TipDecimal,
                     Total = entity.Total,
+                    
                     IsStarred = entity.IsStarred,
                     CreatedUtc = entity.CreatedUtc,
                     ModifiedUtc = entity.ModifiedUtc
@@ -100,8 +106,8 @@ namespace ElevenNote.Services
                 entity.OtherContent = model.OtherContent;
                 entity.Sub = model.Sub;
                 entity.Tip = model.Tip;
-                //----Total----//
-                entity.Total = model.Total;
+                entity.TipDecimal = (model.Tip/100)*model.Sub;
+                entity.Total = model.Sub+((model.Tip / 100) * model.Sub);
                 entity.IsStarred = model.IsStarred;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 

@@ -67,10 +67,8 @@ namespace ElevenNote.Web.Controllers
                     OtherContent = detail.OtherContent,
                     Sub = detail.Sub,
                     Tip = detail.Tip,
-                    
-                    
-                  
-                    //  (Tip/100)*Sub       //
+
+                    TipDecimal = (detail.Tip / 100) * detail.Sub,
                     Total = detail.Sub + ((detail.Tip / 100) * detail.Sub)
                 };
 

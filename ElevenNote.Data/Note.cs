@@ -26,6 +26,7 @@ namespace ElevenNote.Data
 
         public decimal Sub { get; set; }
         public decimal Tip { get; set; }
+        public decimal TipDecimal { get; set; }
         public decimal Total { get; set; }
 
         [DefaultValue(false)]
