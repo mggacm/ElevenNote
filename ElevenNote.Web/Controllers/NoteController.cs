@@ -54,6 +54,8 @@ namespace ElevenNote.Web.Controllers
 
         public ActionResult Edit(int id)
         {
+            
+
             var service = CreateNoteService();
             var detail = service.GetNoteById(id);
             var model =
@@ -61,7 +63,13 @@ namespace ElevenNote.Web.Controllers
                 {
                     NoteId = detail.NoteId,
                     Title = detail.Title,
-                    Content = detail.Content
+                    Content = detail.Content,
+                    OtherContent = detail.OtherContent,
+                    Sub = detail.Sub,
+                    Tip = detail.Tip,
+
+                    TipDecimal = (detail.Tip / 100) * detail.Sub,
+                    Total = detail.Sub + ((detail.Tip / 100) * detail.Sub)
                 };
 
             return View(model);

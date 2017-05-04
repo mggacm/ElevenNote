@@ -13,13 +13,17 @@ namespace ElevenNote.Models
 
         public string Title { get; set; }
 
+        public decimal Total { get; set; }
+        public decimal Tip { get; set; }
+        public decimal TipDecimal { get; set; }
         [UIHint("Starred")]
         public bool IsStarred { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 
-        public override string ToString() => $"[{NoteId}] {Title}";
-        
+        public override string ToString() => $"[{NoteId}] {Title} {Total} {Tip}";
+
+
     }
 }

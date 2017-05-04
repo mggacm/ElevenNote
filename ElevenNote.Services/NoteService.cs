@@ -24,6 +24,11 @@ namespace ElevenNote.Services
                 OwnerId = _userId,
                 Title = model.Title,
                 Content = model.Content,
+                OtherContent = model.OtherContent,
+                Sub = model.Sub,
+                Tip = model.Tip,
+                TipDecimal = (model.Tip / 100) * model.Sub,
+                Total = model.Sub + ((model.Tip / 100) * model.Sub),
                 CreatedUtc = DateTimeOffset.UtcNow
             };
 
@@ -48,6 +53,9 @@ namespace ElevenNote.Services
                             {
                                 NoteId = e.NoteId,
                                 Title = e.Title,
+                                Tip = e.Tip,
+                                TipDecimal = e.TipDecimal,
+                                Total = e.Total,
                                 IsStarred = e.IsStarred,
                                 CreatedUtc = e.CreatedUtc
                             }
@@ -71,6 +79,12 @@ namespace ElevenNote.Services
                     NoteId = entity.NoteId,
                     Title = entity.Title,
                     Content = entity.Content,
+                    OtherContent = entity.OtherContent,
+                    Sub = entity.Sub,
+                    Tip = entity.Tip,
+                    TipDecimal = entity.TipDecimal,
+                    Total = entity.Total,
+                    
                     IsStarred = entity.IsStarred,
                     CreatedUtc = entity.CreatedUtc,
                     ModifiedUtc = entity.ModifiedUtc
@@ -89,6 +103,11 @@ namespace ElevenNote.Services
 
                 entity.Title = model.Title;
                 entity.Content = model.Content;
+                entity.OtherContent = model.OtherContent;
+                entity.Sub = model.Sub;
+                entity.Tip = model.Tip;
+                entity.TipDecimal = (model.Tip/100)*model.Sub;
+                entity.Total = model.Sub+((model.Tip / 100) * model.Sub);
                 entity.IsStarred = model.IsStarred;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 

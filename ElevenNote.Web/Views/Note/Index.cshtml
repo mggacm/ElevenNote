@@ -22,11 +22,17 @@
 
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.NoteId)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tip) 
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.IsStarred)
@@ -39,14 +45,20 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.NoteId)
-        </td>
+        </td>*@  
         <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>
+        <th>
+            @Html.DisplayFor(modelItem => item.TipDecimal) 
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => item.Total)
+        </th>
         <td>
-            @Html.DisplayFor(modeIteml => item.IsStarred, new { Id = item.NoteId })
+            @Html.DisplayFor(modelItem => item.IsStarred, new { Id = item.NoteId })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedUtc)
