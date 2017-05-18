@@ -25,7 +25,7 @@ namespace ElevenNote.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/css/bootstrap.css",
-                      "~/Content/css/clean-blog.css",
+                      //"~/Content/css/clean-blog.css",
                       "~/Content/css/Site.css"));
         }
     }
