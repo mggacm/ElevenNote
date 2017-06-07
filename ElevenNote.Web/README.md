@@ -1,4 +1,4 @@
-﻿[![Banner Page.jpg](https://s9.postimg.org/7hdnvdgdr/Banner_Page.jpg)](https://postimg.org/image/fmvptj4mj/)
+﻿[![Banner Page.jpg](https://s13.postimg.org/6ca95xujb/Capture1.png)](https://postimg.org/image/fmvptj4mj/)
 
 ElevenNote 2.0 is an MVC service web application with database read and write functionality, user purchase logging using Entity Framework. The scope of the application was a tip calculation management system where anyone could create new personal review and calculate tip and total at the time of creation or later. This app was used to solve common MVC problems inlcuding displaying unique data gathered from a database into various views using Razor syntax, and assigning calculation to a note.
 
